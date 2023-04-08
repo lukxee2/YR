@@ -19,7 +19,7 @@ body {
 
 #gradient-canvas {
     --gradient-color-1: #9288df; 
-    --gradient-color-2: #fff; /*  412851  */
+    --gradient-color-2: #e0e0e0; /*  412851  */
     --gradient-color-3: #a15878;  
     --gradient-color-4: #4a4f98;
     z-index: -1;
@@ -37,7 +37,7 @@ body {
     --gradient-color-4: #444a4b; */
 
 .picture {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     width: 78vw; /* 88vw */
     transform: translate(0, 0);
     word-wrap: break-word;
@@ -51,7 +51,7 @@ body {
 
 .logo {
     width: 14vw;
-    margin-top: 1rem;
+    margin-top: 0.1rem;
 }
 
 .img {
@@ -64,16 +64,24 @@ body {
     user-select: none;
 }
 
-.profile {
-    left: 17.5%;
+/* .profile {
+    left: 15%;
     top: 6.5%;
     width: 50vw;
+    position: absolute;
+    z-index: 2;
+} */
+
+.profile {
+    left: 19%;
+    top: 5%;
+    width: 40vw;
     position: absolute;
     z-index: 2;
 }
 
 .text {
-    left: -5%;
+    left: 4%;
     top: 17%;
     width: 30vw;
     position: absolute;
@@ -82,10 +90,47 @@ body {
 }
 
 .text2 {
-    left: 60%;
+    left: 55%;
     top: 17%;
     width: 40vw;
     position: absolute;
     opacity: 0.9;
     z-index: 1;
+}
+
+.text3 {
+    left: 15%;
+    top: 2.5%;
+    width: 60vw;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.videoplayer {
+    left: 34%;
+    top: 53.5%;
+    width: 30vw;
+    position: absolute;
+    z-index: 2;
+    /* outline: #9288df solid 0.5rem;
+    border-radius: 60px; */
+    transform: rotate(-1deg);
+    display: none;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color: #9288df;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    left: 49%;
+    top: 60.5%;
+    display: none;
+}
+
+.transform {
+    transform-style: preserve-3d;
 }
