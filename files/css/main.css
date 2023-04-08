@@ -63,3 +63,29 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
+
+.profile {
+    left: 17.5%;
+    top: 6.5%;
+    width: 50vw;
+    position: absolute;
+    z-index: 2;
+}
+
+.text {
+    left: -5%;
+    top: 17%;
+    width: 30vw;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.text2 {
+    left: 60%;
+    top: 17%;
+    width: 40vw;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 1;
+}
