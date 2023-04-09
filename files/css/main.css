@@ -220,11 +220,18 @@ body:hover > #trailer {
 }
 
 #trailer-icon {
-    font-size: 6px;
-    line-height: 4px;
+    font-size: 10px;
+
+    margin-left: 4.5px;
+    margin-bottom: 5px;
     
+    color: #4a4f98;
     opacity: 0;
     transition: opacity 400ms ease;
+  }
+
+  #trailer:not([data-type=""]) > #trailer-icon {
+    opacity: 1;
   }
 
 /* Scroll bar

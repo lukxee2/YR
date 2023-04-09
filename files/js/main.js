@@ -81,6 +81,8 @@ let e = 0,
           switch(type) {
             case "button":
               return "ti ti-arrow-up-right";
+            case "video":
+              return "ti ti-player-play-filled";
             default:
               return "ti ti-arrow-up-right"; 
           }
