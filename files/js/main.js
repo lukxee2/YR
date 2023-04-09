@@ -63,6 +63,42 @@ let e = 0,
         };
         t2();
 
+        const trailer = document.getElementById("trailer");
+        const animateTrailer = (e, interacting) => {
+          const x = e.clientX - trailer.offsetWidth / 2;
+          const y = e.clientY - trailer.offsetHeight / 2;
+
+          const keyframes = {
+            transform : `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+          }
+          trailer.animate(keyframes, { 
+            duration: 800,
+            fill: "forwards"
+          });
+        }
+
+        const getTrailerClass = type => {
+          switch(type) {
+            case "button":
+              return "ti ti-arrow-up-right";
+            default:
+              return "ti ti-arrow-up-right"; 
+          }
+        }
+
+        window.onmousemove = e => {
+          const interactable = e.target.closest(".interactable"),
+          interacting = interactable !== null;
+          animateTrailer(e, interacting);
+
+          const icon = document.getElementById("trailer-icon");
+
+          trailer.dataset.type = interacting ? interactable.dataset.type : "";
+  
+          if(interacting) {
+            icon.className = getTrailerClass(interactable.dataset.type);
+          }
+        }
         // for (
         //   let e = 0;
         //   e < document.querySelectorAll("[data-parallax]").length;

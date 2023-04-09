@@ -21,8 +21,12 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
 
     <link rel="stylesheet" href="./files/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
+    <div id="trailer">
+        <i id="trailer-icon" class="ti ti-arrow-up-right"></i>
+    </div>
     <div class="center">
         <img src="./files/images/logo.svg" class="logo unselectable"/>
     </div>
@@ -45,7 +49,7 @@
                 <img src="./files/images/ryding.svg" class="text2 unselectable transform section-ryding"/>
                 <img src="./files/images/starring.svg" class="text3 unselectable transform section-starring"/>
                 <img src="./files/images/videoplayer.svg" class="videoplayer unselectable transform ">
-                <button onclick="window.open('https://youtu.be/rHmw87EpGIM','_blank')" class="btn transform section-button">Watch Trailer</button>
+                <button data-type="button" onclick="window.open('https://youtu.be/rHmw87EpGIM','_blank')" class="btn transform section-button interactable">Watch Trailer</button>
                 <img src="./files/images/haventdone.svg" class="havent unselectable transform section-havent"/>
                 <div class="videplayer"><div class="circle"></div></div>
                 </img>
@@ -57,5 +61,4 @@
 
 <script src="./files/js/main.js"></script>
 <script type="module" src="./files/js/mesh.js"></script>
-
 </html>
