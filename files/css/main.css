@@ -1,5 +1,6 @@
 :root {
     --main-color: #fff;
+    --pv: calc(78vw / 3840);
 }
 
 body {
@@ -38,9 +39,11 @@ body {
 
 .picture {
     margin-top: 0.5rem;
-    width: 78vw; /* 88vw */
+    width: calc(3840 * var(--pv)); /* 78vw        88vw */
     transform: translate(0, 0);
     word-wrap: break-word;
+    position: relative;
+    display: block;
     /* position: absolute; */
 }
 
@@ -133,4 +136,87 @@ body {
 
 .transform {
     transform-style: preserve-3d;
+    transform-origin: 50% calc(3334 * var(--pv));
 }
+
+.fakepeople {
+    left: 1.25%;
+    top: 34%;
+    width: 7vw;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 1;
+}
+
+.btn {
+    background-color: #4a4f98;
+    border: none;
+    color: white;
+    position: absolute;
+    width: 15vw;
+    height: 7.5vh;
+    border-radius: 15px;
+    outline: #9288df solid 0.25rem;
+    font-size: 20px;
+    left: 70%;
+    top: 150vh;
+    z-index: 2;
+}
+
+.back-btn {
+    /* background-color: #4a4f98; */
+    background-color: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-size: 20px;
+    left: 25px;
+    top: 25px;
+    z-index: 2;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #7970bb;
+    cursor: pointer;
+}
+
+.havent {
+    left: 30%;
+    top: 200vh;
+    width: 30vw;
+    position: absolute;
+    z-index: 2;
+    background-color: #9288df;
+    /* outline: #4a4f98 solid 0.3rem; */
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: 15px;
+}
+
+/* Scroll bar
+::-webkit-scrollbar {
+    width: 0.8rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */

@@ -41,18 +41,48 @@ let e = 0,
             (s2 += 0.1 * (e2 - s2)),
             (document.querySelector(
               ".section-panel"
-            ).style.transform = `perspective(5000px) rotateY(${s2}deg)`),
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2}px, 0, 0)`),
             (document.querySelector(
               ".section-starring"
-            ).style.transform = `perspective(5000px) rotateY(${s2}deg)`),
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*3.5}px, 0, 0)`),
             (document.querySelector(
               ".section-edvin"
-            ).style.transform = `perspective(5000px) rotateY(${s2}deg)`),
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*3.5}px, 0, 0)`),
             (document.querySelector(
               ".section-ryding"
-            ).style.transform = `perspective(5000px) rotateY(${s2}deg)`),
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*3.5}px, 0, 0)`),
             (document.querySelector(
               ".section-artist"
-            ).style.transform = `perspective(5000px) rotateY(${s2}deg)`);
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*5.5}px, 0, 0)`),
+            (document.querySelector(
+              ".section-button"
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*5.5}px, 0, 0)`),
+            (document.querySelector(
+              ".section-havent"
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*5.5}px, 0, 0)`);
         };
         t2();
+
+        // for (
+        //   let e = 0;
+        //   e < document.querySelectorAll("[data-parallax]").length;
+        //   e++
+        // ) {
+        // let s3 = document
+        //               .querySelectorAll("[data-parallax]")
+        //               [e3].getAttribute("data-parallax"),
+        //             t3 =
+        //               (document
+        //                 .querySelectorAll("[data-parallax]")
+        //                 [e3].parentNode.getBoundingClientRect().top +
+        //                 document
+        //                   .querySelectorAll("[data-parallax]")
+        //                   [e3].parentNode.getBoundingClientRect().height /
+        //                   2) /
+        //                 window.innerHeight -
+        //               0.5,
+        //             o3 = window.innerHeight * s3 * t3;
+        //           document.querySelectorAll("[data-parallax]")[
+        //             e3
+        //           ].style.transform = `translate3d(0, ${o3}px, 0)`;
+        // }
