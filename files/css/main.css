@@ -157,10 +157,20 @@ body {
     height: 7.5vh;
     border-radius: 15px;
     outline: #9288df solid 0.25rem;
-    font-size: 20px;
+    font-size: clamp(0.5rem, 2vw, 2rem);
     left: 70%;
-    top: 150vh;
+    top: 45%;
     z-index: 2;
+    font-family: "LarkeNeueRegular";
+}
+
+@media (max-width: 700px) {
+    .btn {
+        width: 15vw;
+        height: 4vh;
+        border-radius: 10px;
+        outline: #9288df solid 0.2rem;
+    }
 }
 
 .back-btn {
@@ -176,6 +186,20 @@ body {
     left: 25px;
     top: 25px;
     z-index: 2;
+}
+
+@media (max-width: 550px) {
+    .back-btn {
+        left: 10px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .back-btn {
+        left: 5px;
+        top: 5px;
+    }
 }
 
 .icon {
@@ -200,6 +224,7 @@ body {
     padding-inline: 1rem;
     padding-block: 1rem;
     border-radius: 15px;
+    display: none;
 }
 
 #trailer {
@@ -232,6 +257,16 @@ body:hover > #trailer {
 
   #trailer:not([data-type=""]) > #trailer-icon {
     opacity: 1;
+  }
+
+  @font-face {
+    font-family: 'LarkeNeueRegular'; /*a name to be used later*/
+    src: url('../fonts/Larke\ Neue\ Regular.ttf'); /*URL to font*/
+  }
+
+  @font-face {
+    font-family: 'LarkeNeueBold'; /*a name to be used later*/
+    src: url('../fonts/Larke\ Neue\ Bold.ttf'); /*URL to font*/
   }
 
 /* Scroll bar

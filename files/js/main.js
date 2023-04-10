@@ -83,6 +83,8 @@ let e = 0,
               return "ti ti-arrow-up-right";
             case "video":
               return "ti ti-player-play-filled";
+            case "backbutton":
+              return "ti ti-arrow-left";
             default:
               return "ti ti-arrow-up-right"; 
           }

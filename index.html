@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Young Royals | Unofficial Site</title>
     <meta name="description" content="">
     <meta property="og:url" content="https://example.com/">
     <meta property="og:type" content="website">
@@ -21,6 +21,7 @@
     <meta name="format-detection" content="telephone=no,address=no,email=no">
 
     <link rel="stylesheet" href="./files/css/main.css">
+    <link rel="stylesheet" href="./files/css/plyr.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
 <body>
@@ -34,7 +35,7 @@
     <content>
         <div class="center">
             <img src="./files/images/fakepeople.svg" class="fakepeople unselectable"/>
-            <button onclick="window.location.href='/'" class="back-btn">
+            <button data-type="backbutton" onclick="window.location.href='/'" class="back-btn interactable">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M5 12l14 0"></path>
@@ -43,8 +44,8 @@
                  </svg>
             </button>
             <div class="picture">
-                <img src="./files/images/edvin4.png" class="profile unselectable transform section-artist"/>
-                <img src="./files/images/pill2.png" class="img unselectable transform section-panel"/>
+                <img src="./files/images/edvin5.png" class="profile unselectable transform section-artist"/>
+                <img src="./files/images/pill3.png" class="img unselectable transform section-panel"/>
                 <img src="./files/images/edvin.svg" class="text unselectable transform section-edvin"/>
                 <img src="./files/images/ryding.svg" class="text2 unselectable transform section-ryding"/>
                 <img src="./files/images/starring.svg" class="text3 unselectable transform section-starring"/>
@@ -52,6 +53,9 @@
                 <button data-type="button" onclick="window.open('https://youtu.be/rHmw87EpGIM','_blank')" class="btn transform section-button interactable">Watch Trailer</button>
                 <img src="./files/images/haventdone.svg" class="havent unselectable transform section-havent"/>
                 <div class="videplayer"><div class="circle"></div></div>
+                <div>
+                    <!-- <div id="player-charlotte" data-plyr-provider="vimeo" data-plyr-embed-id="707012696"></div> -->
+                </div>
                 </img>
             </div>
         </div>
@@ -61,4 +65,17 @@
 
 <script src="./files/js/main.js"></script>
 <script type="module" src="./files/js/mesh.js"></script>
+<script src="./files/plyr/dist/plyr.min.js" defer></script>
+
+<!-- tabler core -->
+<script src="./files/js/tabler.js" defer></script>
+
+  <script>
+    // @formatter:off
+    document.addEventListener("DOMContentLoaded", function () {
+      window.tabler_player = window.tabler_player || {};
+      window.Plyr && (window.tabler_player["player-charlotte"] = new Plyr('#player-charlotte'));
+    });
+    // @formatter:on
+  </script>
 </html>
