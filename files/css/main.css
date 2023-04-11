@@ -368,6 +368,9 @@ li {
         right: 50px;
         top: 15px; /* top: 40px; */
     }
+    .back-btn {
+        left: 20px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -377,6 +380,9 @@ li {
     }
     li {
         padding: 0 0 0 22px;
+    }
+    .back-btn {
+        left: 15px;
     }
 }
 
@@ -388,10 +394,16 @@ li {
     li {
         padding: 0 0 0 11px;
     }
+    .back-btn {
+        left: 10px;
+    }
 }
 
 @media (max-width: 500px) {
     .front-sns {
         top: 5px;
+    }
+    .back-btn {
+        left: 10px;
     }
 }
