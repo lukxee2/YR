@@ -64,15 +64,74 @@ let e = 0,
         t2();
 
         const trailer = document.getElementById("trailer");
-        const animateTrailer = (e, interacting) => {
+        let circle = document.getElementById("netflix");
+        const animateTrailer = (e, interacting, interactable_icon, interactable) => {
           const x = e.clientX - trailer.offsetWidth / 2;
           const y = e.clientY - trailer.offsetHeight / 2;
 
-          const keyframes = {
-            transform : `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+          let keyframes = {};
+          let keyframes2 = {};
+
+          if (interactable_icon && interactable.dataset.type == "netflix") {
+            keyframes = {
+              transform : `translate(${x}px, ${y}px) scale(${interacting ? 0 : 1})`
+            }
+            keyframes2 = {
+              height: `50px`,
+              width: `50px`
+            }
+            dur = 100;
+            circle = document.getElementById("netflix");
+          } else if (interactable_icon && interactable.dataset.type == "twitter") {
+            keyframes = {
+              transform : `translate(${x}px, ${y}px) scale(${interacting ? 0 : 1})`
+            }
+            keyframes2 = {
+              height: `50px`,
+              width: `50px`,
+              transform: `translate(-23.5%, -75%)`,
+            }
+            dur = 100;
+            circle = document.getElementById("twitter");
+          } else if (interactable_icon && interactable.dataset.type == "youtube") {
+            keyframes = {
+              transform : `translate(${x}px, ${y}px) scale(${interacting ? 0 : 1})`
+            }
+            keyframes2 = {
+              height: `50px`,
+              width: `50px`,
+              transform: `translate(-22%, -78%)`,
+            }
+            dur = 100;
+            circle = document.getElementById("youtube"); 
+          } else if (interactable_icon && interactable.dataset.type == "instagram") {
+            keyframes = {
+              transform : `translate(${x}px, ${y}px) scale(${interacting ? 0 : 1})`
+            }
+            keyframes2 = {
+              height: `50px`,
+              width: `50px`,
+              transform: `translate(-20%, -80%)`,
+            }
+            dur = 100;
+            circle = document.getElementById("instagram"); 
+          } else {
+            keyframes = {
+              transform : `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+            }
+            keyframes2 = {
+              height: `0`,
+              width: `0`
+            }
+            dur = 800;
           }
+          
+          circle.animate(keyframes2, {
+            duration: (interacting ? 800 : 400),
+            fill: "forwards"
+          });
           trailer.animate(keyframes, { 
-            duration: 800,
+            duration: dur,
             fill: "forwards"
           });
         }
@@ -85,6 +144,10 @@ let e = 0,
               return "ti ti-player-play-filled";
             case "backbutton":
               return "ti ti-arrow-left";
+            case "svg":
+              return "";
+              case "svg":
+                return "";
             default:
               return "ti ti-arrow-up-right"; 
           }
@@ -93,7 +156,8 @@ let e = 0,
         window.onmousemove = e => {
           const interactable = e.target.closest(".interactable"),
           interacting = interactable !== null;
-          animateTrailer(e, interacting);
+          const interactable_icon = (interacting && interactable.dataset.type != "svg");
+          animateTrailer(e, interacting, interactable_icon, interactable);
 
           const icon = document.getElementById("trailer-icon");
 
