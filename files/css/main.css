@@ -502,8 +502,8 @@ footer {
   }
 
 .player {
-    height: clamp(50px, 25vh, 500px);
-    width: clamp(50px, 25vw, 500px);
+    height: clamp(50px, 25vh, 1000px);
+    width: clamp(50px, 25vw, 1000px);
     position: absolute;
     top: 61%;
     left: 10%;
@@ -513,8 +513,8 @@ footer {
 /* FOR THE PLAYERS, MAKE SURE TO CHANGE THEIR TRANSFORM PROPERTIES IN CSS FOR MOBILE AND JAVASCRIPT FOR PC */
 
 .player2 {
-    height: clamp(50px, 25vh, 500px);
-    width: clamp(50px, 25vw, 500px);
+    height: clamp(50px, 25vh, 1000px);
+    width: clamp(50px, 25vw, 1000px);
     position: absolute;
     top: 67%;
     left: 55%;
