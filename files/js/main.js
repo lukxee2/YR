@@ -73,7 +73,16 @@ let e = 0,
             ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*5.5}px, 0, 0)`),
             (document.querySelector(
               ".section-havent"
-            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*5.5}px, 0, 0)`);
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2*5.5}px, 0, 0)`),
+            (document.querySelector(
+              ".player"
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2}px, 0, 0) rotate(-2.5deg)`),
+            (document.querySelector(
+              ".player2"
+            ).style.transform = `perspective(5000px) rotateY(${s2}deg) translate3d(${s2}px, 0, 0) rotate(5deg)`),
+            (document.querySelector(
+              ".section-fanedits"
+            ).style.transform = `perspective(5000px) rotateY(${s2*0.5}deg) translate3d(${s2*0.5}px, 0, 0) rotate(5deg)`);
         };
         t2();
 

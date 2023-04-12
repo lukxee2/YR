@@ -64,7 +64,10 @@ body {
 .unselectable {
     -moz-user-select: none;
     -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -ms-user-select: none;
     user-select: none;
+    user-drag: none;  
 }
 
 /* .profile {
@@ -225,6 +228,16 @@ body {
     padding-block: 1rem;
     border-radius: 15px;
     display: none;
+}
+
+.fanedits {
+    left: 38.5%;
+    top: 61%;
+    width: 40vw;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 1;
+    transform: rotate(5deg);
 }
 
 #trailer {
@@ -487,3 +500,23 @@ footer {
     animation: flip-card-animation 2.5s infinite;
     transform: rotateY(180deg);
   }
+
+.player {
+    height: clamp(50px, 25vh, 500px);
+    width: clamp(50px, 25vw, 500px);
+    position: absolute;
+    top: 61%;
+    left: 10%;
+    transform: rotate(-2.5deg);
+}
+
+/* FOR THE PLAYERS, MAKE SURE TO CHANGE THEIR TRANSFORM PROPERTIES IN CSS FOR MOBILE AND JAVASCRIPT FOR PC */
+
+.player2 {
+    height: clamp(50px, 25vh, 500px);
+    width: clamp(50px, 25vw, 500px);
+    position: absolute;
+    top: 67%;
+    left: 55%;
+    transform: rotate(5deg);
+}

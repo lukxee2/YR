@@ -89,8 +89,12 @@
                 <button data-type="button" onclick="window.open('https://youtu.be/rHmw87EpGIM','_blank')" class="btn transform section-button interactable">Watch Trailer</button>
                 <img src="./files/images/haventdone.svg" class="havent unselectable transform section-havent"/>
                 <div class="videplayer"><div class="circle"></div></div>
-                <div>
-                    <!-- <div id="player-charlotte" data-plyr-provider="vimeo" data-plyr-embed-id="707012696"></div> -->
+                <img src="./files/images/fanedits.svg" class="fanedits unselectable transform section-fanedits"/>
+                <div class="player">
+                    <div id="player1" data-plyr-provider="vimeo" data-plyr-embed-id="816712294"></div>
+                </div>
+                <div class="player2">
+                    <div id="player2" data-plyr-provider="vimeo" data-plyr-embed-id="816882516"></div>
                 </div>
                 </img>
                 <footer>
@@ -116,11 +120,15 @@
 <!-- tabler core -->
 <script src="./files/js/tabler.js" defer></script>
 
-  <script>
+<script>
     // @formatter:off
     document.addEventListener("DOMContentLoaded", function () {
       window.tabler_player = window.tabler_player || {};
-      window.Plyr && (window.tabler_player["player-charlotte"] = new Plyr('#player-charlotte'));
+      window.Plyr && (window.tabler_player["player1"] = new Plyr('#player1'));
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      window.tabler_player = window.tabler_player || {};
+      window.Plyr && (window.tabler_player["player2"] = new Plyr('#player2'));
     });
     // @formatter:on
   </script>
