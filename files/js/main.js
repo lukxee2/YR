@@ -101,7 +101,8 @@ let e = 0,
             }
             keyframes2 = {
               height: `50px`,
-              width: `50px`
+              width: `50px`,
+              transform: `translate(-22.5%, -79%)`,
             }
             dur = 100;
             circle = document.getElementById("netflix");

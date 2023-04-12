@@ -332,8 +332,8 @@ li {
 }
 
 .fill-video {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     fill: #fff;
     z-index: 2;
     position: relative;
@@ -452,7 +452,7 @@ footer {
     width: calc(1920 * var(--pv)); 
     height: calc(1750 * var(--pv));
     perspective: 1000px;
-    transform: translate(0, 20%);
+    transform: translate(0, 145%);
     display: block;
     position: absolute;
   }
@@ -519,4 +519,21 @@ footer {
     top: 67%;
     left: 55%;
     transform: rotate(5deg);
+}
+
+.disk {
+    position: absolute;
+    width: 50vw;
+    animation: rotate 5s linear infinite;
+    margin: auto;
+    filter: drop-shadow(0px 5px 7px #000);
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 }
