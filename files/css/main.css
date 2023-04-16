@@ -649,3 +649,11 @@ a {
     width: 1.25rem; 
     fill: currentColor; 
 }
+
+.omarmodel {
+    position: absolute;
+    width: 21vw;
+    left: 50vw;
+    transform: translateY(10%);
+    /* bottom: -80vh; */
+}
