@@ -108,7 +108,12 @@ let e = 0,
             let element = document.querySelector(`.${interactable.classList.item(0)}`);
             let style = getComputedStyle(element);
             let height = style.height.replace("px", "");
-            let new_height = parseInt(height) + 20;
+            let new_height = parseInt(height) * 1.7;
+            // if (height == 30) {
+            //   new_height = parseInt(height) + 20;
+            // } else {
+            //   new_height = parseInt(height) + 15;
+            // }
             keyframes2 = {
               height: `${new_height}px`,
               width: `${new_height}px`,
@@ -123,7 +128,7 @@ let e = 0,
             let element = document.querySelector(`.${interactable.classList.item(0)}`);
             let style = getComputedStyle(element);
             let height = style.height.replace("px", "");
-            let new_height = parseInt(height) + 20;
+            let new_height = parseInt(height) * 1.7;
             keyframes2 = {
               height: `${new_height}px`,
               width: `${new_height}px`,
@@ -138,7 +143,7 @@ let e = 0,
             let element = document.querySelector(`.${interactable.classList.item(0)}`);
             let style = getComputedStyle(element);
             let height = style.height.replace("px", "");
-            let new_height = parseInt(height) + 20;
+            let new_height = parseInt(height) * 1.7;
             keyframes2 = {
               height: `${new_height}px`,
               width: `${new_height}px`,
@@ -153,7 +158,7 @@ let e = 0,
             let element = document.querySelector(`.${interactable.classList.item(0)}`);
             let style = getComputedStyle(element);
             let height = style.height.replace("px", "");
-            let new_height = parseInt(height) + 20;
+            let new_height = parseInt(height) * 1.7;
             keyframes2 = {
               height: `${new_height}px`,
               width: `${new_height}px`,
