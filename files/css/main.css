@@ -667,3 +667,15 @@ a {
     color: #afa6f8; /* afa6f8 */
     font-family: 'LarkeNeueRegular';
 }
+
+@media (max-width: 500px) {
+    #plrtext {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #plrtext {
+        font-size: 0.6rem !important;
+    }
+}
